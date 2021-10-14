@@ -1,3 +1,10 @@
+&pwm0 {
+  status = "okay";
+  // Use P1.04 for LED backlight
+  ch0-pin = <36>;
+  /* ch0-inverted; */
+};
+
 &spi1 {
   compatible = "nordic,nrf-spim";
   status = "okay";
