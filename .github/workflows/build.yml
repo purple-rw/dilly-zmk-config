@@ -33,17 +33,17 @@ jobs:
         run: west update
       - name: West Zephyr export
         run: west zephyr-export
-      - name: West Build (REVIUNG41)
-        run: west build -s zmk/app -b nice_nano_v2 -- -DSHIELD=reviung41 -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: REVIUNG41 DTS File
+      - name: West Build (Dilly)
+        run: west build -s zmk/app -b nice_nano_v2 -- -DSHIELD=dilly -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+      - name: Dilly DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/nice_nano_v2.dts.pre.tmp
-      - name: REVIUNG41 Kconfig file
+      - name: Dilly Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 reviung41_nice_nano_v2.uf2
-      - name: Archive (REVIUNG41)
+        run: cp build/zephyr/zmk.uf2 dilly_nice_nano_v2.uf2
+      - name: Archive (Dilly)
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: reviung41_nice_nano_v2.uf2
+          path: dilly_nice_nano_v2.uf2
