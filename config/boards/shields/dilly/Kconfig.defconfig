@@ -1,0 +1,9 @@
+# Copyright (c) 2021 purple-rw
+# SPDX-License-Identifier: MIT
+
+if SHIELD_DILLY
+
+config ZMK_KEYBOARD_NAME
+    default "Dilly"
+
+endif
