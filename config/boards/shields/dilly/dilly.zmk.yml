@@ -7,4 +7,3 @@ requires: [pro_micro]
 features:
   - keys
   - underglow
-  - backlight
