@@ -14,7 +14,7 @@
     chosen {
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
-        zmk,backlight = &backlight;
+        /* zmk,backlight = &backlight; */
     };
 
     default_transform: keymap_transform_0 {
@@ -52,6 +52,7 @@
             ;
     };
     
+    /*
     backlight: pwmleds {
         compatible = "pwm-leds";
         label = "Backlight LEDs";
@@ -59,4 +60,5 @@
             pwms = <&pwm0 36>;
         };
     };
+    */
 };
