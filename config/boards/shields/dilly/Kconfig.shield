@@ -2,5 +2,5 @@
 # Copyright (c) 2021 purple-rw
 # SPDX-License-Identifier: MIT
 
-config SHIELD_PBGHERKIN
+config SHIELD_DILLY
     def_bool $(shields_list_contains,dilly)
