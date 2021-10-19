@@ -14,7 +14,7 @@
 #define QWRTY 1     // alphas (Qwerty)
 #define NAV   2     // navigation
 #define FUNC  3     // functions
-#define KEYPD 4     // keypad & multimedia
+#define KEYPD 4     // multimedia & keypad
 #define ADJST 5     // bluetooth & rgb
 
 // Special keys
@@ -65,7 +65,7 @@
 // -------------------------------------------------------------
 // |     |     |     |     |     |     |     |     |     |     |
 // |  *  |  *  |  *  |  *  |  *  |  *  |  *  |  *  |  *  |  *  |
-// |  Z  |     |     | Del |  V  |  K  |     |     |  ?  |  /  |
+// |  Z  |     |     | esc |  V  |  K  | del |     |  ?  |  /  |
 // -------------------------------------------------------------
         combos {
             compatible = "zmk,combos";
@@ -108,16 +108,16 @@
             combo_n4    { timeout-ms = <50>; key-positions = < 8 18>; bindings = <&kp N4>;    layers = <BASE QWRTY>; };
             combo_n6    { timeout-ms = <50>; key-positions = < 9 19>; bindings = <&kp N6>;    layers = <BASE QWRTY>; };
 
-            combo_esc   { timeout-ms = <50>; key-positions = < 4  5>; bindings = <&kp ESC>;   layers = <BASE QWRTY>; };
-            combo_del   { timeout-ms = <50>; key-positions = <13 23>; bindings = <&kp DEL>;   layers = <BASE QWRTY KEYPD>; };
-            
             combo_z     { timeout-ms = <50>; key-positions = <10 20>; bindings = <&kp Z>;     layers = <BASE QWRTY>; };
+            combo_esc   { timeout-ms = <50>; key-positions = <13 23>; bindings = <&kp ESC>;   layers = <BASE QWRTY>; };
             combo_v     { timeout-ms = <50>; key-positions = <14 24>; bindings = <&kp V>;     layers = <BASE>; };
             combo_k     { timeout-ms = <50>; key-positions = <15 25>; bindings = <&kp K>;     layers = <BASE>; };
+            combo_del   { timeout-ms = <50>; key-positions = <16 26>; bindings = <&kp DEL>;   layers = <BASE QWRTY>; };
+            combo_qmark { timeout-ms = <50>; key-positions = <18 28>; bindings = <&kp QMARK>; layers = <BASE QWRTY>; };
+            combo_slash { timeout-ms = <50>; key-positions = <19 29>; bindings = <&kp FSLH>;  layers = <BASE QWRTY>; };
             combo_b     { timeout-ms = <50>; key-positions = <14 24>; bindings = <&kp B>;     layers = <QWRTY>; };
             combo_n     { timeout-ms = <50>; key-positions = <15 25>; bindings = <&kp N>;     layers = <QWRTY>; };
-            combo_qmark { timeout-ms = <50>; key-positions = <18 28>; bindings = <&kp QMARK>; layers = <BASE QWRTY>; };
-            combo_fslh  { timeout-ms = <50>; key-positions = <19 29>; bindings = <&kp FSLH>;  layers = <BASE QWRTY>; };
+            combo_esc2  { timeout-ms = <50>; key-positions = < 4  5>; bindings = <&kp ESC>;   layers = <BASE QWRTY>; };
 
             combo_f13   { timeout-ms = <50>; key-positions = < 0  1>; bindings = <&kp F13>;   layers = <FUNC>; };
             combo_f14   { timeout-ms = <50>; key-positions = < 1  2>; bindings = <&kp F14>;   layers = <FUNC>; };
@@ -132,7 +132,9 @@
             combo_f23   { timeout-ms = <50>; key-positions = <22 23>; bindings = <&kp F23>;   layers = <FUNC>; };
             combo_f24   { timeout-ms = <50>; key-positions = <23 24>; bindings = <&kp F24>;   layers = <FUNC>; };
 
-            combo_kpdiv { timeout-ms = <50>; key-positions = <19 29>; bindings = <&kp KP_SLASH>; layers = <KEYPD>; };
+            combo_colon { timeout-ms = <50>; key-positions = < 9 19>; bindings = <&kp COLON>;       layers = <KEYPD>; };
+            combo_kpmul { timeout-ms = <50>; key-positions = <15 25>; bindings = <&kp KP_MULTIPLY>; layers = <KEYPD>; };
+            combo_kpdiv { timeout-ms = <50>; key-positions = <19 29>; bindings = <&kp KP_DIVIDE>;   layers = <KEYPD>; };
 
             combo_adjst { timeout-ms = <50>; key-positions = <24 25>; bindings = <&mo ADJST>;    layers = <BASE QWRTY>; };
             combo_bt4   { timeout-ms = <50>; key-positions = < 6  7>; bindings = <&bt BT_SEL 4>; layers = <ADJST>; };
@@ -190,12 +192,12 @@
 // -------------------------------------------------------------
 // |Undo | Cut |Copy |Paste|SeAll| Ins |PgUp | Up  |PgDn | Del |
 // |LCTRL|LALT |LGUI |LSFT |     |Home |Left |Down |Right| End |
-// |     |     |     | *** |     | Esc |CapLk|Menu |     |     |
+// |     |     |     | *** |     | Esc |CapLk|Menu |Sleep|Power|
 // -------------------------------------------------------------
             bindings = <
-    &kp M_UNDO &kp M_CUT &kp M_COPY &kp M_PASTE &kp M_SELALL &kp INS  &kp PG_UP &kp UP      &kp PG_DN &kp DEL
-    &kp LCTRL  &kp LALT  &kp LGUI   &kp LSFT    &trans       &kp HOME &kp LEFT  &kp DOWN    &kp RIGHT &kp END
-    &trans     &trans    &trans     &trans      &trans       &kp ESC  &kp CAPS  &kp K_CMENU &trans    &trans
+    &kp M_UNDO &kp M_CUT &kp M_COPY &kp M_PASTE &kp M_SELALL &kp INS  &kp PG_UP &kp UP      &kp PG_DN   &kp DEL
+    &kp LCTRL  &kp LALT  &kp LGUI   &kp LSFT    &trans       &kp HOME &kp LEFT  &kp DOWN    &kp RIGHT   &kp END
+    &trans     &trans    &trans     &trans      &trans       &kp ESC  &kp CAPS  &kp K_CMENU &kp C_SLEEP &kp C_POWER
             >;
         };
 
@@ -214,7 +216,7 @@
         };
 
         keypd_layer {
-// Keypad & Multimedia
+// Multimedia & Keypad
 // (Hold)
 // -------------------------------------------------------------
 // |     |     |     |     |     |     |     |     |     |     |
@@ -222,14 +224,14 @@
 // | *** |     |     |     |     |     |     |     |     |     |
 // -------------------------------------------------------------
 // -------------------------------------------------------------
-// |Eject|Rewnd|Stop |FFwd |NumLk|  =  |  7  |  8  |  9  |  *  |
-// |     |Prev |Play |Next |  *  |  -  |  4  |  5  |  6  |  +  |
+// |Eject|Rewnd|Stop |FFwd |Zoom+|NumLk|  7  |  8  |  9  |  =  |
+// |     |Prev |Play |Next |Zoom-|  -  |  4  |  5  |  6  |  +  |
 // | *** |Vol- |Mute |Vol+ |  .  |  0  |  1  |  2  |  3  |Enter|
 // -------------------------------------------------------------
             bindings = <
-    &kp C_EJECT &kp C_RW        &kp C_STOP    &kp C_FF        &kp KP_NUM      &kp KP_EQUAL &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MULTIPLY
-    &mo LCTRL   &hm LALT C_PREV &hm LGUI C_PP &hm LSFT C_NEXT &kp KP_MULTIPLY &kp KP_MINUS &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS
-    &trans      &kp C_VOL_DN    &kp K_MUTE    &kp C_VOL_UP    &kp KP_DOT      &kp KP_N0    &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_ENTER
+    &kp C_EJECT &kp C_RW        &kp C_STOP    &kp C_FF        &kp ZOOMIN  &kp KP_NUM   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_EQUAL
+    &mo LCTRL   &hm LALT C_PREV &hm LGUI C_PP &hm LSFT C_NEXT &kp ZOOMOUT &kp KP_MINUS &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS
+    &trans      &kp C_VOL_DN    &kp K_MUTE    &kp C_VOL_UP    &kp KP_DOT  &kp KP_N0    &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_ENTER
             >;
         };
 
