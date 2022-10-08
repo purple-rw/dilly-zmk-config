@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2021 purple-rw
+ * Copyright (c) 2021-22 purple-rw
  *
  * SPDX-License-Identifier: MIT
  *
@@ -10,12 +10,18 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
 
+&pwm0 {
+  status = "okay";
+  // Use P1.04 for LED backlight
+  ch0-pin = <36>;
+  /* ch0-inverted; */
+};
+
 / {
     chosen {
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
-        zmk,underglow = &led_strip;
-        /* zmk,backlight = &backlight; */
+        zmk,backlight = &backlight;
     };
 
     default_transform: keymap_transform_0 {
@@ -52,14 +58,13 @@
             , <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
-    
-    /*
+
     backlight: pwmleds {
         compatible = "pwm-leds";
         label = "Backlight LEDs";
         pwm_led_0 {
+            // Use P1.04 for LED backlight
             pwms = <&pwm0 36>;
         };
     };
-    */
 };
