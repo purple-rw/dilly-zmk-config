@@ -88,24 +88,23 @@
 
 // Colemak (Horizontal Combos)
 // -------------------------------------------------------------
-// |     |<-  Esc  ->|     |     |     |     |<-   ?   ->|     |
+// |     |<-  Esc  ->|     |     |     |     |     |     |     |
 // |     |     |     |<-   V   ->|<-   K   ->|     |     |     |
-// |     |<-  Tab  ->|<- Bkspc ->|<- Space ->|<-   /   ->|     |
+// |     |<-  Tab  ->|<- Bkspc ->|<- Space ->|<- Enter ->|     |
 // -------------------------------------------------------------
             combo_esc   { timeout-ms = <50>; key-positions = < 1  2>; bindings = <&kp ESC>;   layers = <BASE QWRTY HNSDN SYMBL>; };
             combo_tab   { timeout-ms = <50>; key-positions = <21 22>; bindings = <&kp TAB>;   layers = <BASE QWRTY HNSDN SYMBL>; };
             combo_bspc  { timeout-ms = <50>; key-positions = <23 24>; bindings = <&kp BSPC>;  layers = <BASE QWRTY HNSDN SYMBL>; };
             combo_space { timeout-ms = <50>; key-positions = <25 26>; bindings = <&kp SPACE>; layers = <BASE QWRTY HNSDN SYMBL>; };
-            combo_qmark { timeout-ms = <50>; key-positions = < 7  8>; bindings = <&kp QMARK>; layers = <BASE QWRTY       SYMBL>; };
-            combo_slash { timeout-ms = <50>; key-positions = <27 28>; bindings = <&kp FSLH>;  layers = <BASE QWRTY       SYMBL>; };
+            combo_enter { timeout-ms = <50>; key-positions = <27 28>; bindings = <&kp FSLH>;  layers = <BASE QWRTY HNSDN SYMBL>; };
             combo_v     { timeout-ms = <50>; key-positions = <13 14>; bindings = <&kp V>;     layers = <BASE>; };
             combo_k     { timeout-ms = <50>; key-positions = <15 16>; bindings = <&kp K>;     layers = <BASE>; };
 
 // Qwerty (Horizontal Combos)
 // -------------------------------------------------------------
-// |     |<-  Esc  ->|     |     |     |     |<-   ?   ->|     |
+// |     |<-  Esc  ->|     |     |     |     |     |     |     |
 // |     |     |     |<-   B   ->|<-   N   ->|     |     |     |
-// |     |<-  Tab  ->|<- Bkspc ->|<- Space ->|<-   /   ->|     |
+// |     |<-  Tab  ->|<- Bkspc ->|<- Space ->|<- Enter ->|     |
 // -------------------------------------------------------------
             combo_b     { timeout-ms = <50>; key-positions = <13 14>; bindings = <&kp B>;     layers = <QWRTY HNSDN>; };
             combo_n     { timeout-ms = <50>; key-positions = <15 16>; bindings = <&kp N>;     layers = <QWRTY>; };
@@ -114,19 +113,18 @@
 // -------------------------------------------------------------
 // |     |<-  Esc  ->|     |     |     |     |     |     |     |
 // |     |     |     |<-   B   ->|<-   ;   ->|     |     |     |
-// |     |<-  Tab  ->|<- Bkspc ->|<- Space ->|<-   K   ->|     |
+// |     |<-  Tab  ->|<- Bkspc ->|<- Space ->|<- Enter ->|     |
 // -------------------------------------------------------------
             combo_semi  { timeout-ms = <50>; key-positions = <15 16>; bindings = <&kp SEMI>;  layers = <HNSDN>; };
-            combo_k2    { timeout-ms = <50>; key-positions = <27 28>; bindings = <&kp K>;     layers = <HNSDN>; };
 
 // Symbols (Horizontal Combos)
 // -------------------------------------------------------------
 // |     |     |     |     |     |     |     |     |     |     |
-// |     |     |     |<-   ?   ->|<-   /   ->|     |     |     |
+// |     |     |     |<-   /   ->|<-   ?   ->|     |     |     |
 // |     |     |     |     |     |     |     |     |     |     |
 // -------------------------------------------------------------
-            combo_qmak2 { timeout-ms = <50>; key-positions = <13 14>; bindings = <&kp QMARK>; layers = <SYMBL>; };
-            combo_slsh2 { timeout-ms = <50>; key-positions = <15 16>; bindings = <&kp FSLH>;  layers = <SYMBL>; };
+            combo_slsh2 { timeout-ms = <50>; key-positions = <13 14>; bindings = <&kp FSLH>;  layers = <SYMBL>; };
+            combo_qmak2 { timeout-ms = <50>; key-positions = <15 16>; bindings = <&kp QMARK>; layers = <SYMBL>; };
 
 // Number Row & Functions (Horizontal Combos)
 // -------------------------------------------------------------
@@ -187,12 +185,12 @@
 // -------------------------------------------------------------
 // |  Q  |  W  |  F  |  P  |  B  |  J  |  L  |  U  |  Y  |  ;  |
 // |  A  |  R  |  S  |  T  |  G  |  M  |  N  |  E  |  I  |  O  |
-// |  Z  |  X  |  C  |  D  |BkSpc|Space|  H  |  ,  |  .  |Enter|
+// |  Z  |  X  |  C  |  D  |BkSpc|Space|  H  |  ,  |  .  |  /  |
 // -------------------------------------------------------------
             bindings = < 
     &kp Q       &kp W       &kp F       &kp P       &kp B         &kp J           &kp L       &kp U       &kp Y       &kp SEMI
     &hm LCTRL A &hm LALT R  &hm LGUI S  &hm LSFT T  &kp G         &kp M           &hm RSFT N  &hm RGUI E  &hm RALT I  &hm RCTRL O
-    &kp Z       &kp X       &kp C       &lt LOWER D &mt LSFT BSPC &th SYMBL SPACE &lt RAISE H &kp COMMA   &kp DOT     &kp ENTER
+    &kp Z       &kp X       &kp C       &lt LOWER D &mt LSFT BSPC &th SYMBL SPACE &lt RAISE H &kp COMMA   &kp DOT     &kp FSLH
             >;
         } ;
 
@@ -201,12 +199,12 @@
 // -------------------------------------------------------------
 // |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |
 // |  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |
-// |  Z  |  X  |  C  |  V  |BkSpc|Space|  M  |  ,  |  .  |Enter|
+// |  Z  |  X  |  C  |  V  |BkSpc|Space|  M  |  ,  |  .  |  /  |
 // -------------------------------------------------------------
             bindings = < 
     &kp Q       &kp W       &kp E       &kp R       &kp T         &kp Y           &kp U       &kp I       &kp O       &kp P
     &hm LCTRL A &hm LALT S  &hm LGUI D  &hm LSFT F  &kp G         &kp H           &hm RSFT J  &hm RGUI K  &hm RALT L  &hm RCTRL SEMI
-    &kp Z       &kp X       &kp C       &lt LOWER V &mt LSFT BSPC &th SYMBL SPACE &lt RAISE M &kp COMMA   &kp DOT     &kp ENTER
+    &kp Z       &kp X       &kp C       &lt LOWER V &mt LSFT BSPC &th SYMBL SPACE &lt RAISE M &kp COMMA   &kp DOT     &kp FSLH
             >;
         } ;
 
@@ -215,12 +213,12 @@
 // -------------------------------------------------------------
 // |  W  |  F  |  M  |  P  |  V  |  /  |  .  |  Q  |  J  |  Z  |
 // |  R  |  S  |  N  |  T  |  G  |  ,  |  A  |  E  |  I  |  H  |
-// |  X  |  C  |  L  |  D  |BkSpc|Space|  U  |  O  |  Y  |Enter|
+// |  X  |  C  |  L  |  D  |BkSpc|Space|  U  |  O  |  Y  |  K  |
 // -------------------------------------------------------------
             bindings = < 
     &kp W       &kp F       &kp M       &kp P       &kp V         &kp FSLH        &kp DOT     &kp Q       &kp J       &kp Z
     &hm LCTRL R &hm LALT S  &hm LGUI N  &hm LSFT T  &kp G         &kp COMMA       &hm RSFT A  &hm RGUI E  &hm RALT I  &hm RCTRL H
-    &kp X       &kp C       &kp L       &lt LOWER D &mt LSFT BSPC &th SYMBL SPACE &lt RAISE U &kp O       &kp Y       &kp ENTER
+    &kp X       &kp C       &kp L       &lt LOWER D &mt LSFT BSPC &th SYMBL SPACE &lt RAISE U &kp O       &kp Y       &kp K
             >;
         } ;
 
