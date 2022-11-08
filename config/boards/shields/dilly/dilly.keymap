@@ -123,51 +123,52 @@
 // |     |     |     |<-   /   ->|<-   ?   ->|     |     |     |
 // |     |     |     |     |     |     |     |     |     |     |
 // -------------------------------------------------------------
-            combo_slsh2 { timeout-ms = <50>; key-positions = <13 14>; bindings = <&kp FSLH>;  layers = <SYMBL>; };
-            combo_qmak2 { timeout-ms = <50>; key-positions = <15 16>; bindings = <&kp QMARK>; layers = <SYMBL>; };
+            combo_slsh  { timeout-ms = <50>; key-positions = <13 14>; bindings = <&kp FSLH>;  layers = <SYMBL>; };
+            combo_qmak  { timeout-ms = <50>; key-positions = <15 16>; bindings = <&kp QMARK>; layers = <SYMBL>; };
 
-// Number Row & Functions (Horizontal Combos)
+// Functions & Numbers (Horizontal Combos)
 // -------------------------------------------------------------
-// |     |     |     |     |     |     |     |     |     |     |
-// |     |     |     |<-   7   ->|<-   6   ->|     |     |     |
+// |     |     |     |     |     |<-   *   ->|     |     |     |
+// |     |     |     |<-  F12  ->|<-   :   ->|     |     |     |
 // |     |     |     |     |     |     |     |     |     |     |
 // -------------------------------------------------------------
-            combo_7     { timeout-ms = <50>; key-positions = <13 14>; bindings = <&kp N7>;    layers = <LOWER>; };
-            combo_6     { timeout-ms = <50>; key-positions = <15 16>; bindings = <&kp N6>;    layers = <LOWER>; };
+            combo_f12   { timeout-ms = <50>; key-positions = <13 14>; bindings = <&kp F12>;   layers = <LOWER>; };
+            combo_star  { timeout-ms = <50>; key-positions = < 5  6>; bindings = <&kp STAR>;  layers = <LOWER>; };
+            combo_colon { timeout-ms = <50>; key-positions = <15 16>; bindings = <&kp COLON>; layers = <LOWER>; };
 
 // Keypad & Navigation (Horizontal Combos)
 // -------------------------------------------------------------
-// |<-   =   ->|     |     |     |     |    Zm-   Zm+    |     |
+// |     |     |     |<- NumLk ->|     |    Zm-   Zm+    |     |
 // |     |     |     |<-   *   ->|     |     |     |     |     |
 // |     |     |     |     |     |     |     |     |     |     |
 // -------------------------------------------------------------
-            combo_kpeql { timeout-ms = <50>; key-positions = < 0  1>; bindings = <&kp KP_EQUAL>;    layers = <RAISE>; };
+            combo_kpnum { timeout-ms = <50>; key-positions = < 3  4>; bindings = <&kp KP_NUM>;      layers = <RAISE>; };
             combo_kpmul { timeout-ms = <50>; key-positions = <13 14>; bindings = <&kp KP_MULTIPLY>; layers = <RAISE>; };
             combo_zmout { timeout-ms = <50>; key-positions = < 6  7>; bindings = <&kp ZOOMOUT>;     layers = <RAISE>; };
             combo_zmin  { timeout-ms = <50>; key-positions = < 7  8>; bindings = <&kp ZOOMIN>;      layers = <RAISE>; };
 
-// Media (Horizontal Combos)
+// Functions2 & Multimedia (Horizontal Combos)
 // -------------------------------------------------------------
 // |     |     |     |     |     |     |     |     |     |     |
-// |     |     |     |<- Next  ->|     |     |     |     |     |
+// |     |     |     |<- ScrLk ->|<- Prev  ->|     |     |     |
 // |     |     |     |     |     |     |     |     |     |     |
 // -------------------------------------------------------------
-            combo_next  { timeout-ms = <50>; key-positions = <13 14>; bindings = <&kp C_NEXT>;  layers = <MEDIA>; };
+            combo_slck  { timeout-ms = <50>; key-positions = <13 14>; bindings = <&kp SLCK>;    layers = <MEDIA>; };
+            combo_prev  { timeout-ms = <50>; key-positions = <15 16>; bindings = <&kp C_PREV>;  layers = <MEDIA>; };
 
 
 // Bluetooth & RGB (Horizontal Combos)
 // -------------------------------------------------------------
-// |     |     |     |     |     |     |    BT4   BT5   BT6    |
-// |     |     |     |     |     |     |     |     |     |     |
+// |<- Disp+ ->|     |     |     |     |    BT4   BT5   BT6    |
+// |<- Disp- ->|     |     |     |     |     |     |     |     |
 // |     |     |     |     |     |     |     |     |     |     |
 // -------------------------------------------------------------
-            combo_bt4   { timeout-ms = <50>; key-positions = < 6  7>; bindings = <&bt BT_SEL 4>; layers = <ADJST>; };
-            combo_bt5   { timeout-ms = <50>; key-positions = < 7  8>; bindings = <&bt BT_SEL 5>; layers = <ADJST>; };
-            combo_bt6   { timeout-ms = <50>; key-positions = < 8  9>; bindings = <&bt BT_SEL 6>; layers = <ADJST>; };
-/*
-            combo_blinc { timeout-ms = <50>; key-positions = < 1  2>; bindings = <&bl BL_INC>;   layers = <ADJST>; };
-            combo_bldec { timeout-ms = <50>; key-positions = <11 12>; bindings = <&bl BL_DEC>;   layers = <ADJST>; };
-*/
+            combo_bt4   { timeout-ms = <50>; key-positions = < 6  7>; bindings = <&bt BT_SEL 4>;  layers = <ADJST>; };
+            combo_bt5   { timeout-ms = <50>; key-positions = < 7  8>; bindings = <&bt BT_SEL 5>;  layers = <ADJST>; };
+            combo_bt6   { timeout-ms = <50>; key-positions = < 8  9>; bindings = <&bt BT_SEL 6>;  layers = <ADJST>; };
+
+            combo_dpinc { timeout-ms = <50>; key-positions = < 1  2>; bindings = <&kp C_BRI_INC>; layers = <ADJST>; };
+            combo_dpdec { timeout-ms = <50>; key-positions = <11 12>; bindings = <&bl C_BRI_DEC>; layers = <ADJST>; };
         };
     };
 
@@ -239,42 +240,42 @@
         lower_layer {
 // number row & functions
 // -------------------------------------------------------------
-// | F1  | F2  | F3  | F4  | F5  | F6  | F7  | F8  | F9  | F10 |
-// |  9  |  5  |  3  |  1  | F11 | F12 |  0  |  2  |  4  |  8  |
-// |  *  |  -  |  +  | *** |  =  |  :  |  6  |  ,  |  .  |  /  |
+// | F1  | F2  | F3  | F4  |Pause|  =  |  7  |  8  |  9  |  /  |
+// | F5  | F6  | F7  | F8  |PrnSc|  -  |  4  |  5  |  6  |  +  |
+// | F9  | F10 | F11 | *** |ScrLk|  0  |  1  |  2  |  3  |  .  |
 // -------------------------------------------------------------
             bindings = <
-    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6       &kp F7       &kp F8       &kp F9       &kp F10
-    &hm LCTRL N9 &hm LALT N5  &hm LGUI N3  &hm LSFT N1  &kp F11      &kp F12      &hm RSFT N0  &hm RGUI N2  &hm RALT N4  &hm RCTRL N8
-    &kp STAR     &kp MINUS    &kp PLUS     &trans       &kp EQUAL    &kp COLON    &lt ADJST N6 &kp COMMA    &kp DOT      &kp FSLH
+    &kp F1       &kp F2       &kp F3       &kp F4       &kp PAUSE_BREAK &kp EQUAL    &kp N7       &kp N8       &kp N9       &kp FSLH
+    &hm LCTRL F5 &hm LALT F6  &hm LGUI F7  &hm LSFT F8  &kp PSCRN       &kp MINUS    &hm N4       &hm RGUI N5  &hm RALT N6  &hm RCTRL PLUS
+    &kp F9       &kp F10      &kp F11      &trans       &kp SLCK        &kp N0       &lt N1       &kp N2       &kp N3       &kp DOT
             >;
         };
 
         raise_layer {
 // keypad & navigation
 // -------------------------------------------------------------
-// |  /  |  7  |  8  |  9  |NumLk| Ins |PgUp | Up  |PgDn |Menu |
-// |  +  |  4  |  5  |  6  |  .  |Home |Left |Down |Right| End |
-// |  -  |  1  |  2  |  3  |  0  |Enter| *** |CapWd|CapLk|     |
+// |  /  |  7  |  8  |  9  |  =  | Ins |PgUp | Up  |PgDn | Del |
+// |  +  |  4  |  5  |  6  |  -  |Home |Left |Down |Right| End |
+// |  .  |  1  |  2  |  3  |  0  |Enter| *** |CapWd|CapLk|Menu |
 // -------------------------------------------------------------
             bindings = <
-    &kp KP_DIVIDE     &kp KP_N7      &kp KP_N8      &kp KP_N9       &kp KP_NUM  &kp INS      &kp PG_UP   &kp UP     &kp PG_DN  &kp K_APP
-    &ph LCTRL KP_PLUS &ph LALT KP_N4 &ph LGUI KP_N5 &ph LSFT KP_N6  &kp KP_DOT  &kp HOME     &kp LEFT    &kp DOWN   &kp RIGHT  &kp END
-    &kp KP_MINUS      &kp KP_N1      &kp KP_N2      &lt ADJST KP_N3 &kp KP_N0   &kp KP_ENTER &trans      &caps_word &kp CAPS   &none
+    &kp KP_DIVIDE     &kp KP_N7      &kp KP_N8      &kp KP_N9       &kp KP_EQUAL &kp INS      &kp PG_UP   &kp UP     &kp PG_DN  &kp DEL
+    &ph LCTRL KP_PLUS &ph LALT KP_N4 &ph LGUI KP_N5 &ph LSFT KP_N6  &kp KP_MINUS &kp HOME     &kp LEFT    &kp DOWN   &kp RIGHT  &kp END
+    &kp KP_DOT        &kp KP_N1      &kp KP_N2      &lt ADJST KP_N3 &kp KP_N0    &kp KP_ENTER &trans      &caps_word &kp CAPS   &kp K_APP
             >;
         };
 
         media_layer {
 // Multimedia & Functions2
 // -------------------------------------------------------------
-// | F13 | F14 | F15 | F16 | F17 | F18 | F19 | F20 | F21 | F22 |
-// |Eject|Vol- |Mute |Vol+ | F23 | F24 |PrnSc|ScrLk|Pause|     |
-// |Prev |Rewnd|Play |FFwd | *** | *** |     |     |     |     |
+// | F13 | F14 | F15 | F16 |Pause|AlWin|Files| WWW |Calc |     |
+// | F17 | F18 | F19 | F20 |PrnSc|AlApp|Vol- |Mute |Vol+ |Eject|
+// | F21 | F22 | F23 | F24 | *** | *** |Rewnd|Play |FFwd |Next |
 // -------------------------------------------------------------
             bindings = <
-    &kp F13           &kp F14           &kp F15         &kp F16           &kp F17   &kp F18   &kp F19        &kp F20        &kp F21              &kp F22
-    &hm LCTRL C_EJECT &hm LALT C_VOL_DN &hm LGUI C_MUTE &hm LSFT C_VOL_UP &kp F23   &kp F24   &hm RSFT PSCRN &hm RGUI SLCK  &hm RALT PAUSE_BREAK &kp RCTRL
-    &kp C_PREV        &kp C_RW          &kp C_PP        &kp C_FF          &trans    &trans    &trans         &trans         &trans               &trans
+    &kp F13      &kp F14      &kp F15      &kp F16      &kp PAUSE_BREAK &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS      &kp C_AL_FILES    &kp C_AL_WWW    &kp C_AL_CALC     &trans      
+    &hm F17      &kp F18      &kp F19      &kp F20      &kp PSCRN       &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS &hm RSFT C_VOL_DN &hm RGUI C_MUTE &hm RALT C_VOL_UP &hm RCTRL C_EJECT
+    &kp F21      &kp F22      &kp F23      &kp F24      &trans          &trans                                 &kp C_RW          &kp C_PP        &kp C_FF          &kp C_NEXT
             >;
         };
 
