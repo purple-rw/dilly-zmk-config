@@ -124,7 +124,7 @@
 // |     |     |     |     |     |     |     |     |     |     |
 // -------------------------------------------------------------
             combo_slsh  { timeout-ms = <50>; key-positions = <13 14>; bindings = <&kp FSLH>;  layers = <SYMBL>; };
-            combo_qmak  { timeout-ms = <50>; key-positions = <15 16>; bindings = <&kp QMARK>; layers = <SYMBL>; };
+            combo_qmark { timeout-ms = <50>; key-positions = <15 16>; bindings = <&kp QMARK>; layers = <SYMBL>; };
 
 // Functions & Numbers (Horizontal Combos)
 // -------------------------------------------------------------
@@ -246,7 +246,7 @@
 // -------------------------------------------------------------
             bindings = <
     &kp F1       &kp F2       &kp F3       &kp F4       &kp PAUSE_BREAK &kp EQUAL    &kp N7       &kp N8       &kp N9       &kp FSLH
-    &hm LCTRL F5 &hm LALT F6  &hm LGUI F7  &hm LSFT F8  &kp PSCRN       &kp MINUS    &hm N4       &hm RGUI N5  &hm RALT N6  &hm RCTRL PLUS
+    &hm LCTRL F5 &hm LALT F6  &hm LGUI F7  &hm LSFT F8  &kp PSCRN       &kp MINUS    &hm RSFT N4  &hm RGUI N5  &hm RALT N6  &hm RCTRL PLUS
     &kp F9       &kp F10      &kp F11      &trans       &kp SLCK        &kp N0       &lt N1       &kp N2       &kp N3       &kp DOT
             >;
         };
