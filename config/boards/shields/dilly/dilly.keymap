@@ -123,25 +123,26 @@
 // |     |     |     |<-   /   ->|<-   ?   ->|     |     |     |
 // |     |     |     |     |     |     |     |     |     |     |
 // -------------------------------------------------------------
-            combo_slsh2 { timeout-ms = <50>; key-positions = <13 14>; bindings = <&kp FSLH>;  layers = <SYMBL>; };
-            combo_qmak2 { timeout-ms = <50>; key-positions = <15 16>; bindings = <&kp QMARK>; layers = <SYMBL>; };
+            combo_fslh  { timeout-ms = <50>; key-positions = <13 14>; bindings = <&kp FSLH>;  layers = <SYMBL>; };
+            combo_qmark { timeout-ms = <50>; key-positions = <15 16>; bindings = <&kp QMARK>; layers = <SYMBL>; };
 
-// Number Row & Functions (Horizontal Combos)
+// Functions & Numbers (Horizontal Combos)
 // -------------------------------------------------------------
-// |     |     |     |     |     |     |     |     |     |     |
-// |     |     |     |<-   7   ->|<-   6   ->|     |     |     |
+// |     |     |     |     |     |<-   *   ->|     |     |     |
+// |     |     |     |<-  F12  ->|<-   :   ->|     |     |     |
 // |     |     |     |     |     |     |     |     |     |     |
 // -------------------------------------------------------------
-            combo_7     { timeout-ms = <50>; key-positions = <13 14>; bindings = <&kp N7>;    layers = <LOWER>; };
-            combo_6     { timeout-ms = <50>; key-positions = <15 16>; bindings = <&kp N6>;    layers = <LOWER>; };
+            combo_f12   { timeout-ms = <50>; key-positions = <13 14>; bindings = <&kp F12>;   layers = <LOWER>; };
+            combo_star  { timeout-ms = <50>; key-positions = < 5  6>; bindings = <&kp STAR>;  layers = <LOWER>; };
+            combo_colon { timeout-ms = <50>; key-positions = <15 16>; bindings = <&kp COLON>; layers = <LOWER>; };
 
 // Keypad & Navigation (Horizontal Combos)
 // -------------------------------------------------------------
-// |<-   =   ->|     |     |     |     |    Zm-   Zm+    |     |
+// |     |     |     |<- NumLk ->|     |    Zm-   Zm+    |     |
 // |     |     |     |<-   *   ->|     |     |     |     |     |
 // |     |     |     |     |     |     |     |     |     |     |
 // -------------------------------------------------------------
-            combo_kpeql { timeout-ms = <50>; key-positions = < 0  1>; bindings = <&kp KP_EQUAL>;    layers = <RAISE>; };
+            combo_kpnum { timeout-ms = <50>; key-positions = < 3  4>; bindings = <&kp KP_NUM>;      layers = <RAISE>; };
             combo_kpmul { timeout-ms = <50>; key-positions = <13 14>; bindings = <&kp KP_MULTIPLY>; layers = <RAISE>; };
             combo_zmout { timeout-ms = <50>; key-positions = < 6  7>; bindings = <&kp ZOOMOUT>;     layers = <RAISE>; };
             combo_zmin  { timeout-ms = <50>; key-positions = < 7  8>; bindings = <&kp ZOOMIN>;      layers = <RAISE>; };
