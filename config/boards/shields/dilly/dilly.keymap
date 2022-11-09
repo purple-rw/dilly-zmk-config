@@ -168,7 +168,7 @@
             combo_bt6   { timeout-ms = <50>; key-positions = < 8  9>; bindings = <&bt BT_SEL 6>;  layers = <ADJST>; };
 
             combo_dpinc { timeout-ms = <50>; key-positions = < 1  2>; bindings = <&kp C_BRI_INC>; layers = <ADJST>; };
-            combo_dpdec { timeout-ms = <50>; key-positions = <11 12>; bindings = <&bl C_BRI_DEC>; layers = <ADJST>; };
+            combo_dpdec { timeout-ms = <50>; key-positions = <11 12>; bindings = <&kp C_BRI_DEC>; layers = <ADJST>; };
         };
     };
 
