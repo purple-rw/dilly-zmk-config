@@ -254,14 +254,14 @@
         raise_layer {
 // keypad & navigation
 // -------------------------------------------------------------
-// |  /  |  7  |  8  |  9  |NumLk| Ins |PgUp | Up  |PgDn |Menu |
-// |  +  |  4  |  5  |  6  |  .  |Home |Left |Down |Right| End |
-// |  -  |  1  |  2  |  3  |  0  |Enter| *** |CapWd|CapLk|     |
+// |  /  |  7  |  8  |  9  |  =  | Ins |PgUp | Up  |PgDn | Del |
+// |  +  |  4  |  5  |  6  |  -  |Home |Left |Down |Right| End |
+// |  .  |  1  |  2  |  3  |  0  |Enter| *** |CapWd|CapLk|Menu |
 // -------------------------------------------------------------
             bindings = <
-    &kp KP_DIVIDE     &kp KP_N7      &kp KP_N8      &kp KP_N9       &kp KP_NUM  &kp INS      &kp PG_UP   &kp UP     &kp PG_DN  &kp K_APP
-    &ph LCTRL KP_PLUS &ph LALT KP_N4 &ph LGUI KP_N5 &ph LSFT KP_N6  &kp KP_DOT  &kp HOME     &kp LEFT    &kp DOWN   &kp RIGHT  &kp END
-    &kp KP_MINUS      &kp KP_N1      &kp KP_N2      &lt ADJST KP_N3 &kp KP_N0   &kp KP_ENTER &trans      &caps_word &kp CAPS   &none
+    &kp KP_DIVIDE     &kp KP_N7      &kp KP_N8      &kp KP_N9       &kp KP_EQUAL &kp INS      &kp PG_UP   &kp UP     &kp PG_DN  &kp DEL
+    &ph LCTRL KP_PLUS &ph LALT KP_N4 &ph LGUI KP_N5 &ph LSFT KP_N6  &kp KP_MINUS &kp HOME     &kp LEFT    &kp DOWN   &kp RIGHT  &kp END
+    &kp KP_DOT        &kp KP_N1      &kp KP_N2      &lt ADJST KP_N3 &kp KP_N0    &kp KP_ENTER &trans      &caps_word &kp CAPS   &kp K_APP
             >;
         };
 
