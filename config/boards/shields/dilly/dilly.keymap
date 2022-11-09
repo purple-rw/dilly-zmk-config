@@ -15,7 +15,7 @@
 #define QWRTY 1     // alphas (Qwerty)
 #define HNSDN 2     // alphas (Hands Down Neu)
 #define SYMBL 3     // symbols
-#define LOWER 4     // number row & functions
+#define LOWER 4     // functions & numbers
 #define RAISE 5     // keypad & navigation
 #define MEDIA 6     // multimedia & functions2
 #define ADJST 7     // bluetooth
@@ -238,16 +238,16 @@
         };
 
         lower_layer {
-// number row & functions
+// functions & numbers
 // -------------------------------------------------------------
-// | F1  | F2  | F3  | F4  | F5  | F6  | F7  | F8  | F9  | F10 |
-// |  9  |  5  |  3  |  1  | F11 | F12 |  0  |  2  |  4  |  8  |
-// |  *  |  -  |  +  | *** |  =  |  :  |  6  |  ,  |  .  |  /  |
+// | F1  | F2  | F3  | F4  |Pause|  =  |  7  |  8  |  9  |  /  |
+// | F5  | F6  | F7  | F8  |PrnSc|  -  |  4  |  5  |  6  |  +  |
+// | F9  | F10 | F11 | *** |ScrLk|  0  |  1  |  2  |  3  |  .  |
 // -------------------------------------------------------------
             bindings = <
-    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6       &kp F7       &kp F8       &kp F9       &kp F10
-    &hm LCTRL N9 &hm LALT N5  &hm LGUI N3  &hm LSFT N1  &kp F11      &kp F12      &hm RSFT N0  &hm RGUI N2  &hm RALT N4  &hm RCTRL N8
-    &kp STAR     &kp MINUS    &kp PLUS     &trans       &kp EQUAL    &kp COLON    &lt ADJST N6 &kp COMMA    &kp DOT      &kp FSLH
+    &kp F1       &kp F2       &kp F3       &kp F4       &kp PAUSE_BREAK &kp EQUAL    &kp N7       &kp N8       &kp N9       &kp FSLH
+    &hm LCTRL F5 &hm LALT F6  &hm LGUI F7  &hm LSFT F8  &kp PSCRN       &kp MINUS    &hm RSFT N4  &hm RGUI N5  &hm RALT N6  &hm RCTRL PLUS
+    &kp F9       &kp F10      &kp F11      &trans       &kp SLCK        &kp N0       &lt ADJST N1 &kp N2       &kp N3       &kp DOT
             >;
         };
 
