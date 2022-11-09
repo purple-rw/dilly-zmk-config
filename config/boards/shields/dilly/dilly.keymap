@@ -147,28 +147,28 @@
             combo_zmout { timeout-ms = <50>; key-positions = < 6  7>; bindings = <&kp ZOOMOUT>;     layers = <RAISE>; };
             combo_zmin  { timeout-ms = <50>; key-positions = < 7  8>; bindings = <&kp ZOOMIN>;      layers = <RAISE>; };
 
-// Media (Horizontal Combos)
+// Functions2 & Multimedia (Horizontal Combos)
 // -------------------------------------------------------------
 // |     |     |     |     |     |     |     |     |     |     |
-// |     |     |     |<- Next  ->|     |     |     |     |     |
+// |     |     |     |<- ScrLk ->|<- Prev  ->|     |     |     |
 // |     |     |     |     |     |     |     |     |     |     |
 // -------------------------------------------------------------
-            combo_next  { timeout-ms = <50>; key-positions = <13 14>; bindings = <&kp C_NEXT>;  layers = <MEDIA>; };
+            combo_slck  { timeout-ms = <50>; key-positions = <13 14>; bindings = <&kp SLCK>;    layers = <MEDIA>; };
+            combo_prev  { timeout-ms = <50>; key-positions = <15 16>; bindings = <&kp C_PREV>;  layers = <MEDIA>; };
 
 
 // Bluetooth & RGB (Horizontal Combos)
 // -------------------------------------------------------------
-// |     |     |     |     |     |     |    BT4   BT5   BT6    |
-// |     |     |     |     |     |     |     |     |     |     |
+// |<- Disp+ ->|     |     |     |     |    BT4   BT5   BT6    |
+// |<- Disp- ->|     |     |     |     |     |     |     |     |
 // |     |     |     |     |     |     |     |     |     |     |
 // -------------------------------------------------------------
-            combo_bt4   { timeout-ms = <50>; key-positions = < 6  7>; bindings = <&bt BT_SEL 4>; layers = <ADJST>; };
-            combo_bt5   { timeout-ms = <50>; key-positions = < 7  8>; bindings = <&bt BT_SEL 5>; layers = <ADJST>; };
-            combo_bt6   { timeout-ms = <50>; key-positions = < 8  9>; bindings = <&bt BT_SEL 6>; layers = <ADJST>; };
-/*
-            combo_blinc { timeout-ms = <50>; key-positions = < 1  2>; bindings = <&bl BL_INC>;   layers = <ADJST>; };
-            combo_bldec { timeout-ms = <50>; key-positions = <11 12>; bindings = <&bl BL_DEC>;   layers = <ADJST>; };
-*/
+            combo_bt4   { timeout-ms = <50>; key-positions = < 6  7>; bindings = <&bt BT_SEL 4>;  layers = <ADJST>; };
+            combo_bt5   { timeout-ms = <50>; key-positions = < 7  8>; bindings = <&bt BT_SEL 5>;  layers = <ADJST>; };
+            combo_bt6   { timeout-ms = <50>; key-positions = < 8  9>; bindings = <&bt BT_SEL 6>;  layers = <ADJST>; };
+
+            combo_dpinc { timeout-ms = <50>; key-positions = < 1  2>; bindings = <&kp C_BRI_INC>; layers = <ADJST>; };
+            combo_dpdec { timeout-ms = <50>; key-positions = <11 12>; bindings = <&kp C_BRI_DEC>; layers = <ADJST>; };
         };
     };
 
