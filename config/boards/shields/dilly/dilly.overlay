@@ -64,7 +64,7 @@
         label = "Backlight LEDs";
         pwm_led_0 {
             // Use P1.04 for LED backlight
-            pwms = <&pwm0 36>;
+            pwms = <&pwm0 36 10000 PWM_POLARITY_NORMAL>;
         };
     };
 };
