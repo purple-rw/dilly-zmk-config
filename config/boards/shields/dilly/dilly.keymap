@@ -57,7 +57,7 @@
 // -------------------------------------------------------------
 // |     |     |     |     |     |     |     |     |     |     |
 // |     |     |     |     |     |     |     |     |     |     |
-// |     |     |     |Keypd|     |     |Symbl|     |     |     |
+// |     |     |     |Keypd|Symbl|Keypd|Symbl|     |     |     |
 // -------------------------------------------------------------
             combo_symbl { timeout-ms = <50>; key-positions = <24 26>; bindings = <&mo SYMBL>; layers = <BASE QWRTY HNSDN SEMMK>; };
             combo_keypd { timeout-ms = <50>; key-positions = <23 25>; bindings = <&mo KEYPD>; layers = <BASE QWRTY HNSDN SEMMK>; };
