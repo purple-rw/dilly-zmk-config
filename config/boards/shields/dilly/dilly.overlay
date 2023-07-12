@@ -12,9 +12,26 @@
 
 &pwm0 {
   status = "okay";
-  // Use P1.04 for LED backlight
-  ch0-pin = <36>;
-  /* ch0-inverted; */
+  pinctrl-0 = <&pwm0_default>;
+  pinctrl-1 = <&pwm0_sleep>;
+  pinctrl-names = "default", "sleep";
+};
+
+&pinctrl {
+    pwm0_default: pwm0_default {
+        group1 {
+            // Use P1.04 for LED backlight
+            psels = <NRF_PSEL(PWM_OUT0, 0, 36)>;
+	      };
+    };
+
+    pwm0_sleep: pwm0_sleep {
+        group1 {
+            // Use P1.04 for LED backlight
+            psels = <NRF_PSEL(PWM_OUT0, 0, 36)>;
+            low-power-enable;
+	      };
+    };
 };
 
 / {
@@ -61,10 +78,8 @@
 
     backlight: pwmleds {
         compatible = "pwm-leds";
-        label = "Backlight LEDs";
         pwm_led_0 {
-            // Use P1.04 for LED backlight
-            pwms = <&pwm0 36>;
+            pwms = <&pwm0 0 10000 PWM_POLARITY_NORMAL>;
         };
     };
 };
